@@ -6,7 +6,7 @@ import base64
 from datetime import datetime  # Import datetime for date comparison
 
 # MongoDB connection
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient(st.secrets["database"]["clientlink"])
 studentsDB = client["StudentsDB"]
 studentsCollection = studentsDB["StudentsCollection"]
 validationDB = client["validationDB"]
